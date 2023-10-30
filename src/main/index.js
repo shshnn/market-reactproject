@@ -13,12 +13,8 @@ function MainPage(){
                 });
     },[]);
     
-    return ( <div><div id="header">
-    <div id="header-area">
-      <img src="images/images/icons/logo.png" alt="" />
-    </div>
-  </div>
-  <div id="body">
+    return ( <div>
+  
     <div id="banner">
       <img src="images/images/banners/banner1.png" alt="" />
     </div>
@@ -26,8 +22,8 @@ function MainPage(){
     <div id="product-list">
         {
             products.map(function(product,index){
-return ( <div className="product-card">
-    <Link className="product-link" to={`/products/${index}`}>
+return ( <div className="product-card" key={index}>
+    <Link className="product-link" to={`/products/${product.id}`}>
 <div>
     <img className="product-img" src={product.imageUrl}/>
 </div>
@@ -49,7 +45,6 @@ return ( <div className="product-card">
             })}
        
     </div>
-  </div>
-  <div id="footer"></div></div>);
+  </div>);
 }
 export default MainPage;
