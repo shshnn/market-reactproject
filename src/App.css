@@ -11,9 +11,10 @@ html,body,#root,#root>div{
   justify-content: center;
 }
 #body {
-  height: 100vh;
-
-  width: 1024px;
+  
+  min-height: 100vh;
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 24px;
 }
@@ -38,4 +39,19 @@ html,body,#root,#root>div{
 #header-area  img {
   width: 128px;
   height: 36px;
+}
+
+@media screen and (max-width :400px){
+  .product-card {
+    width: 100px !important;
+  }
+  #header {
+    padding: 0 8px;
+  }
+  #body {
+    padding: 0 8px;
+  }
+  .ant-carousel {
+    margin: 0 8px;
+  }
 }
